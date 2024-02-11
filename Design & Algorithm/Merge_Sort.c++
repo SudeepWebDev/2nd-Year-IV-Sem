@@ -3,6 +3,7 @@ using namespace std;
 
 void merge(int arr[], int p, int q, int r)
 {
+    int comp;
     int n1 = q - p + 1;
     int n2 = r - q;
     int L[n1], R[n2];
@@ -15,6 +16,7 @@ void merge(int arr[], int p, int q, int r)
     int k = p;
     while (i < n1 && j < n2)
     {
+        comp++;
         if (L[i] <= R[j])
         {
             arr[k] = L[i];
@@ -39,6 +41,8 @@ void merge(int arr[], int p, int q, int r)
         j++;
         k++;
     }
+
+    cout<<"Number of comparisons: "<< comp;
     
 }
 void mergeSort(int arr[], int l, int r)
