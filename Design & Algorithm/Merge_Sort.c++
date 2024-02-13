@@ -18,27 +18,19 @@ void merge(int arr[], int p, int q, int r)
     {
         comp++;
         if (L[i] <= R[j])
-        {
-            arr[k] = L[i];
-            i++;
-        }
+            arr[k] = L[i++];
         else
-        {
-            arr[k] = R[j];
-            j++;
-        }
+            arr[k] = R[j++];
         k++;
     }
     while (i < n1)
     {
-        arr[k] = L[i];
-        i++;
+        arr[k] = L[i++];
         k++;
     }
     while (j < n2)
     {
-        arr[k] = R[j];
-        j++;
+        arr[k] = R[j++];
         k++;
     }
 
